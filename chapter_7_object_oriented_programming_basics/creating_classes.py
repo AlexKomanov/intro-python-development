@@ -1,3 +1,4 @@
+from tire import Tire
 class Car:
     """
     Car models a car with tires and an engine
@@ -16,6 +17,7 @@ class Car:
 
 my_car = Car('electrical', [25, 25, 25, 25])
 
+
 print(my_car)
 print(my_car.tires)
 print(my_car.engine)
@@ -24,4 +26,10 @@ print(my_car.license)
 
 my_car.description()
 
+tire = Tire('P', 205, 55, 16, "TOYO")
+tires = [tire, tire, tire, tire]
+
+my_car2 = Car('electrical', tires=tires)
+
+my_car2.description()
 
